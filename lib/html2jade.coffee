@@ -270,7 +270,7 @@ class Converter
             output.write data
       output.writeln()
       output.leave()
-    else if @options.bodyless and (tagName is 'html' or tagName is 'body')
+    else if @options.bodyless and (tagName is 'html' or tagName is 'body' or tagName is 'head')
       @children node, output, false
     else if tagText
       if doNotEncode
